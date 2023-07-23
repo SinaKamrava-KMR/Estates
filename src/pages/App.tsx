@@ -1,11 +1,12 @@
 
-function App() {
+import Login from "./Login";
 
+function App() {
   return (
     <>
-<h1>Estates</h1>
+    <Login/>
     </>
-  )
+  );
 }
 
-export default App
+export default App;
