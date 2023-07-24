@@ -34,6 +34,11 @@ const userSlice = createSlice({
     closeToast: (state) => {
       state.openToast = false;
     },
+
+    logout: (state) => {
+      state.user = undefined;
+      state.severity= undefined;
+    }
   },
   extraReducers: (builder) => {
     builder.addCase(authUser.pending, (state) => {
@@ -59,5 +64,5 @@ const userSlice = createSlice({
   },
 });
 
-export const { closeToast } = userSlice.actions;
+export const {logout, closeToast } = userSlice.actions;
 export default userSlice.reducer;
