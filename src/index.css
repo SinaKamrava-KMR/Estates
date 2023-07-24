@@ -10,10 +10,19 @@
 
 
 body {
-  margin: 0;
+
   min-width: 100vw;
   min-height: 100vh;
   font-family: 'Ubuntu', sans-serif;
-  padding: 20px;
+  overflow: hidden;
+
+}
+
+#root{
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 

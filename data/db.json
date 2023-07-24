@@ -1,5 +1,22 @@
 {
-  "posts": [{ "id": 1, "title": "json-server", "author": "typicode" }],
-  "comments": [{ "id": 1, "body": "some comment", "postId": 1 }],
-  "profile": { "name": "typicode" }
+  "users": [
+    {
+      "id": "6b933d24-8a98-48c7-8cb8-7664e582ec02",
+      "firstName": "sina",
+      "lastName": "kamrava",
+      "email":"sinakamrava3118@gmail.com",
+      "password":"JJJfffaam&31"
+    },
+    {
+      "id": "6b93dfgfdgd24-8a98-48c7-8cb8-7664e582ec02",
+      "firstName": "Ali",
+      "lastName": "Homayouni",
+      "email":"ali@gmail.com",
+      "password":"JJJfffaaa&31"
+    }
+  ],
+  "files":[
+      
+
+  ]
 }
