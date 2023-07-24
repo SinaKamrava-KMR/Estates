@@ -21,7 +21,7 @@ function Toast({ open, msg, severity, handleClose }: ToastType) {
       animate={{ opacity: 1 }}
       initial={{ opacity: 0 }}
     >
-      <Snackbar open={open} autoHideDuration={3000} onClose={handleClose}>
+      <Snackbar open={open} autoHideDuration={1000} onClose={handleClose}>
         <Alert variant="filled" onClose={handleClose} severity={severity} sx={{ width: "100%" }}>
           {msg}
         </Alert>

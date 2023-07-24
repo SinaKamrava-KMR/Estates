@@ -1,6 +1,7 @@
 import React from "react";
 import { Outlet, useNavigation } from "react-router";
 import Loader from "../components/common/Loader";
+import Header from "../components/Header/Header";
 
 function AppLayout() {
   const navigation = useNavigation();
@@ -8,7 +9,7 @@ function AppLayout() {
   return (
     <div>
       {loading && <Loader />}
-      <h1>App Layout</h1>
+      <Header />
       <main>
         <Outlet />
       </main>

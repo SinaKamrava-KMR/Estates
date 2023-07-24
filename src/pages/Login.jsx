@@ -19,7 +19,7 @@ import { createPortal } from "react-dom";
 import LinearIndeterminate from "../components/common/LinearIndeterminate";
 import Toast from "../components/common/Toast";
 import { useSelector, useDispatch } from "react-redux";
-import { closeToast ,authUser} from "../redux/reducers/user/userSlice";
+import { closeToast, authUser } from "../redux/reducers/user/userSlice";
 
 //  styled
 const RightBox = styled(Box)({
@@ -57,8 +57,6 @@ const LoginForm = styled(FormControl)({
   height: "65%",
 });
 
-
-
 //component
 function Login() {
   const { openToast, isLoading, message, severity } = useSelector(
@@ -82,7 +80,7 @@ function Login() {
     if (severity !== "success") return;
     const id = setTimeout(() => {
       navigate("/", { replace: true });
-    }, 2000);
+    }, 1000);
 
     return () => clearTimeout(id);
   }, [severity, navigate]);
