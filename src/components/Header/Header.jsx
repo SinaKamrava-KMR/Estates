@@ -8,6 +8,7 @@ import EButton from "../common/EButton";
 import LoginIcon from "@mui/icons-material/Login";
 import { useSelector } from "react-redux";
 import Profile from "./Profile";
+
 const HeaderWrapper = styled(Box)({
   width: "100%",
   height: "65px",
