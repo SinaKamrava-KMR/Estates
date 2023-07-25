@@ -66,7 +66,7 @@ function HomePage() {
             No Worries 🔥
           </SpecilWord>
           <Title>
-            Esay Way To Find a <SpecilWord>Perfect</SpecilWord> Property
+            Easy Way To Find a <SpecilWord>Perfect</SpecilWord> Property
             <SpecilWord>.</SpecilWord>
           </Title>
         </motion.div>

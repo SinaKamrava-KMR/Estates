@@ -6,8 +6,9 @@ import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import NotFound from "./pages/NotFound";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
-import Rent from "./pages/Rent";
+
 import Map from "./components/map/Map";
+import RentHouses from "./components/Rent/RentHouses";
 
 const router = createBrowserRouter([
   {
@@ -32,7 +33,7 @@ const router = createBrowserRouter([
       },
       {
         path: "/rent",
-        element: <Rent />,
+        element: <RentHouses />,
       },
     ],
   },

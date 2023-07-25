@@ -78,7 +78,7 @@ function Header() {
         ))}
         {location.pathname !== "/" && (
           <Line
-            initial={{ width: 0 }}
+            initial={{ width: 0, left: activePosition }}
             animate={{ width: 60, left: activePosition }}
             transition={{ duration: 0.5 }}
           />
