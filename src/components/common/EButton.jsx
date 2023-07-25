@@ -5,13 +5,15 @@ import React from "react";
 const ButtonStyle = styled(Button)({
   backgroundColor: "#fff",
   color: "#161619",
+  boxShadow:"0 0 5px #e2e2e2",
   display: "flex",
   alignItems: "center",
   gap: 15,
   paddingBlock: 10,
   fontWeight: "bold",
   "&:hover": {
-    backgroundColor: "#e9e9e9",
+    backgroundColor: "#fefefe",
+    boxShadow:"0 0 5px #dadada",
   },
 });
 

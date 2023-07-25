@@ -8,6 +8,7 @@ import EButton from "../common/EButton";
 import LoginIcon from "@mui/icons-material/Login";
 import { useSelector } from "react-redux";
 import Profile from "./Profile";
+
 const HeaderWrapper = styled(Box)({
   width: "100%",
   height: "65px",
@@ -77,7 +78,7 @@ function Header() {
         ))}
         {location.pathname !== "/" && (
           <Line
-            initial={{ width: 0 }}
+            initial={{ width: 0, left: activePosition }}
             animate={{ width: 60, left: activePosition }}
             transition={{ duration: 0.5 }}
           />

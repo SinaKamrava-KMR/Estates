@@ -5,14 +5,14 @@ import LogoutIcon from "@mui/icons-material/Logout";
 import { useDispatch } from "react-redux";
 import { logout } from "../../redux/reducers/user/userSlice";
 const ImageBox = styled("img")({
-  width: 50,
-  height: 50,
+  width: 40,
+  height: 40,
   borderRadius: "50%",
-  objectFit:"cover"
+  objectFit: "cover",
 });
 const BtnWrapper = styled("div")({
   cursor: "pointer",
-  marginLeft:"10px"
+  marginLeft: "10px",
 });
 const Wrapper = styled(Box)({
   display: "flex",
@@ -21,15 +21,17 @@ const Wrapper = styled(Box)({
 });
 
 function Profile({ user }) {
-  const dispatch = useDispatch()
+  const dispatch = useDispatch();
   return (
     <Wrapper>
-      <Typography variant="body1">
+      <Typography variant="body1" sx={{ fontSize: 16, fontWeight: "bold" }}>
         {user.firstName} {user.lastName}
       </Typography>
       <ImageBox src="./src/assets/images/prof.jpg" />
 
-      <BtnWrapper onClick={()=>dispatch(logout())}><LogoutIcon  /></BtnWrapper>
+      <BtnWrapper onClick={() => dispatch(logout())}>
+        <LogoutIcon />
+      </BtnWrapper>
     </Wrapper>
   );
 }
