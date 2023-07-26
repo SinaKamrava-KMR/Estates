@@ -50,7 +50,7 @@ function Header() {
   const user = useSelector((state) => state.user.user);
 
   useEffect(() => {
-    if (location.pathname === "/") return;
+    if (location.pathname === "/" || location.pathname === "/file") return;
     if (location.pathname === "/map") setActivePosition(100);
     if (location.pathname === "/about") setActivePosition(0);
     if (location.pathname === "/rent") setActivePosition(190);

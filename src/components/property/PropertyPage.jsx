@@ -6,12 +6,17 @@ import { createPortal } from "react-dom";
 import SliderModal from "../Slider/SliderModal";
 import RateBox from "../common/RateBox";
 import AddLocationIcon from "@mui/icons-material/AddLocation";
+import SingleBedIcon from "@mui/icons-material/SingleBed";
+import BathtubIcon from "@mui/icons-material/Bathtub";
+import YardIcon from "@mui/icons-material/Yard";
+import LocalParkingIcon from "@mui/icons-material/LocalParking";
+import SmsIcon from "@mui/icons-material/Sms";
 const Wrapper = styled.div`
   display: grid;
   gap: 20px;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: 500px 300px;
-
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: 500px 340px;
+  padding-bottom: 20px;
   @media (max-width: 900px) {
     grid-template-columns: repeat(1, 1fr);
     grid-template-rows: 300px 500px 300px;
@@ -19,7 +24,7 @@ const Wrapper = styled.div`
 `;
 const SliderWrapper = styled.div`
   grid-row: span 1;
-  grid-column: span 3;
+  grid-column: span 4;
   position: relative;
   @media (max-width: 900px) {
     grid-row: span 1;
@@ -30,14 +35,20 @@ const ContentWrapper = styled.div`
   display: flex;
   flex-direction: column;
   gap: 10px;
-  grid-column: span 2;
+  grid-column: span 3;
   @media (max-width: 900px) {
     grid-column: span 1;
   }
 `;
 const SideBarWrapper = styled.div`
-  background-color: #84fc9a;
+  display: flex;
+
+  flex-direction: column;
+  gap: 10px;
+  border-radius: 10px;
+  box-shadow: 0 0 13px #e8e8e8;
   grid-column: span 1;
+  padding: 20px;
 `;
 const ImageWrapper = styled.div`
   width: 100%;
@@ -50,7 +61,6 @@ const ImageWrapper = styled.div`
     object-fit: cover;
   }
 `;
-
 const TagContent = styled.p`
   position: absolute;
   bottom: 20px;
@@ -64,7 +74,6 @@ const TagContent = styled.p`
     font-size: 20px;
   }
 `;
-
 const ShowSliderWrapper = styled.div`
   display: flex;
   align-items: center;
@@ -101,7 +110,6 @@ const SliderText = styled.p`
     font-size: 16px;
   }
 `;
-
 const IconWrapper = styled.div`
   color: #363535;
   background-color: white;
@@ -118,7 +126,6 @@ const IconWrapper = styled.div`
     transform: rotate(45deg);
   }
 `;
-
 const IconToastBox = styled.div`
   position: absolute;
   background-color: #ffffff;
@@ -145,7 +152,6 @@ const IconToastBox = styled.div`
     clip-path: polygon(25% 25%, 52% 48%, 44.5% 55.5%, 42.13% 57.88%);
   }
 `;
-
 const Title = styled.h1`
   color: #1c1c1c;
   @media (max-width: 900px) {
@@ -177,7 +183,6 @@ const MediaWrapper = styled.div`
   gap: 15px;
   margin-top: 10px;
 `;
-
 const MediaImage = styled.img`
   max-width: 170px;
   height: 90px;
@@ -186,6 +191,64 @@ const MediaImage = styled.img`
   transition: all 0.1s ease-in;
   &:active {
     scale: 0.8;
+  }
+`;
+const HouseOptionsWrapper = styled.div`
+  display: flex;
+  align-items: center;
+  height: 50px;
+  margin-block: 20px;
+  padding-inline: 10px;
+  gap: 10px;
+  background-color: #c9c9c927;
+  border-radius: 10px;
+  justify-content: space-between;
+`;
+const HouseOptions = styled.div`
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  color: #888888;
+  & p {
+    color: #222;
+  }
+`;
+
+const PriceWraperr = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 10px;
+
+  & p:last-child {
+    font-size: 35px;
+    font-weight: 500;
+    color: #2a2b36;
+  }
+`;
+
+const BtnsWrapper = styled.div`
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  & >:last-child{
+    color:#979797 ;
+    cursor: pointer;
+  }
+`;
+const ShowBtn = styled.button`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #11101b;
+  color: white;
+  font-size: 18px;
+  flex: 1;
+  cursor: pointer;
+  padding-block: 8px;
+  border-radius: 6px;
+  &:hover{
+    background-color: #000000;
   }
 `;
 
@@ -251,7 +314,7 @@ function PropertyPage() {
           per week with utilities included. But hurry before the price increases
           assigned parking.
         </DescriptionWrapper>
-
+        <span style={{ flex: 1 }}></span>
         <MediaWrapper>
           <MediaImage
             onClick={(e) => setCurentSrc(e.target.src)}
@@ -272,7 +335,51 @@ function PropertyPage() {
         </MediaWrapper>
       </ContentWrapper>
 
-      <SideBarWrapper>Side Bar</SideBarWrapper>
+      <SideBarWrapper>
+        <p>Brif Information</p>
+        <p style={{ fontSize: "18px" }}>Owner,Reale state agancy</p>
+        <HouseOptionsWrapper>
+          <HouseOptions>
+            <SingleBedIcon />
+            <p>2</p>
+          </HouseOptions>
+          <HouseOptions>
+            <BathtubIcon />
+            <p>5</p>
+          </HouseOptions>
+          <HouseOptions>
+            <LocalParkingIcon />
+            <p>1</p>
+          </HouseOptions>
+          <HouseOptions>
+            <YardIcon />
+            <p>1,342ft</p>
+          </HouseOptions>
+        </HouseOptionsWrapper>
+
+        <div
+          style={{
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "space-evenly",
+          }}
+        >
+          <PriceWraperr>
+            <p>Daily room rent</p>
+            <p>$77</p>
+          </PriceWraperr>
+          <PriceWraperr>
+            <p>Weekly room rent</p>
+            <p>$543</p>
+          </PriceWraperr>
+        </div>
+
+        <span style={{ flex: 1 }}></span>
+        <BtnsWrapper>
+          <ShowBtn>Show Contact</ShowBtn>
+          <SmsIcon />
+        </BtnsWrapper>
+      </SideBarWrapper>
     </Wrapper>
   );
 }
