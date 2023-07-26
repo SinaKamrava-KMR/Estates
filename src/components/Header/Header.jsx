@@ -10,6 +10,10 @@ import { useSelector } from "react-redux";
 import Profile from "./Profile";
 
 const HeaderWrapper = styled(Box)({
+  position: "sticky",
+  top: 0,
+  zIndex: 10,
+  backgroundColor:"#fff",
   width: "100%",
   height: "65px",
   display: "flex",

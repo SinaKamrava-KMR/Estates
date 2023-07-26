@@ -1,17 +1,15 @@
 import { motion } from "framer-motion";
 import { InputAdornment, TextField } from "@material-ui/core";
-import { useState } from "react";
 import SearchIcon from "@mui/icons-material/Search";
 import CloseIcon from "@mui/icons-material/Close";
 
-function Search() {
-  const [value, setValue] = useState("");
+function Search({ value, dispatch }) {
   function handleChange(e) {
-    setValue(e.target.value);
+    dispatch({ type: "rent/search", payload: e.target.value });
   }
 
   function handleClear() {
-    setValue("");
+    dispatch({ type: "rent/resetSearch"});
   }
   return (
     <motion.div
