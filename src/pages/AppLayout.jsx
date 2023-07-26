@@ -1,8 +1,9 @@
 import React from "react";
 import { Outlet, useNavigation } from "react-router";
 import Loader from "../components/common/Loader";
-import Header from "../components/header/Header";
+
 import { Box, styled } from "@mui/material";
+import Header from "../components/Header/Header";
 
 const Wrapper = styled(Box)({
   display: "flex",

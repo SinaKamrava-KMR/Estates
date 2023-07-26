@@ -1,4 +1,3 @@
-
 import AppLayout from "./pages/AppLayout";
 import HomePage from "./components/home/HomePage";
 import Login from "./pages/Login";
@@ -9,6 +8,7 @@ import Contact from "./pages/Contact";
 
 import Map from "./components/map/Map";
 import RentHouses from "./components/Rent/RentHouses";
+import PropertyPage from "./components/property/PropertyPage";
 
 const router = createBrowserRouter([
   {
@@ -34,6 +34,10 @@ const router = createBrowserRouter([
       {
         path: "/rent",
         element: <RentHouses />,
+      },
+      {
+        path: "/file/:fileId",
+        element: <PropertyPage />,
       },
     ],
   },
