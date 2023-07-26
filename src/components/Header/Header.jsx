@@ -12,8 +12,10 @@ import Profile from "./Profile";
 const HeaderWrapper = styled(Box)({
   position: "sticky",
   top: 0,
+  left: 0,
+  right: 0,
   zIndex: 10,
-  backgroundColor:"#fff",
+  backgroundColor: "#fff",
   width: "100%",
   height: "65px",
   display: "flex",

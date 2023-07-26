@@ -14,7 +14,10 @@ const Wrapper = styled(Box)({
 const MainWrapper = styled(Box)({
   flex: 1,
   display: "grid",
-  alignContent: "center"
+  alignContent: "center",
+  gridTemplateRows: "1fr",
+  gridTemplateColumns: "1fr",
+
 });
 
 function AppLayout() {
