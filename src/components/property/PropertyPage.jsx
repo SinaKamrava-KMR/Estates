@@ -4,30 +4,34 @@ import { styled } from "styled-components";
 import GamesIcon from "@mui/icons-material/Games";
 import { createPortal } from "react-dom";
 import SliderModal from "../Slider/SliderModal";
+import RateBox from "../common/RateBox";
+import AddLocationIcon from "@mui/icons-material/AddLocation";
 const Wrapper = styled.div`
   display: grid;
   gap: 20px;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: 500px 300px;
 
-  @media (max-width: 800px) {
+  @media (max-width: 900px) {
     grid-template-columns: repeat(1, 1fr);
-    grid-template-rows: 300px 400px 300px;
+    grid-template-rows: 300px 500px 300px;
   }
 `;
 const SliderWrapper = styled.div`
   grid-row: span 1;
   grid-column: span 3;
   position: relative;
-  @media (max-width: 800px) {
+  @media (max-width: 900px) {
     grid-row: span 1;
     grid-column: span 1;
   }
 `;
 const ContentWrapper = styled.div`
-  background-color: #69c8ff;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
   grid-column: span 2;
-  @media (max-width: 800px) {
+  @media (max-width: 900px) {
     grid-column: span 1;
   }
 `;
@@ -56,7 +60,7 @@ const TagContent = styled.p`
   background-color: #11111166;
   padding: 10px 20px;
   border-radius: 5px;
-  @media (max-width: 800px) {
+  @media (max-width: 900px) {
     font-size: 20px;
   }
 `;
@@ -76,7 +80,7 @@ const ShowSliderWrapper = styled.div`
   cursor: pointer;
   width: 200px;
   height: 120px;
-  @media (max-width: 800px) {
+  @media (max-width: 900px) {
     width: 120px;
     height: 80px;
     border-radius: 10px;
@@ -93,7 +97,7 @@ const SliderText = styled.p`
   font-size: 20px;
   width: 100px;
   text-align: center;
-  @media (max-width: 800px) {
+  @media (max-width: 900px) {
     font-size: 16px;
   }
 `;
@@ -110,7 +114,7 @@ const IconWrapper = styled.div`
   height: 40px;
   top: 20px;
   left: 15px;
-  &>:first-child{
+  & > :first-child {
     transform: rotate(45deg);
   }
 `;
@@ -142,9 +146,52 @@ const IconToastBox = styled.div`
   }
 `;
 
+const Title = styled.h1`
+  color: #1c1c1c;
+  @media (max-width: 900px) {
+    font-size: 20px;
+  }
+`;
+const TitleWrapper = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+`;
+const LocationWrapper = styled.div`
+  display: flex;
+  align-items: center;
+  gap: 5px;
+
+  font-size: 15px;
+  color: "#6d6d6d";
+`;
+const DescriptionWrapper = styled.p`
+  font-size: 18px;
+  color: "#252525";
+  line-height: 1.4;
+`;
+const MediaWrapper = styled.div`
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-top: 10px;
+`;
+
+const MediaImage = styled.img`
+  max-width: 170px;
+  height: 90px;
+  flex: 1;
+  border-radius: 10px;
+  transition: all 0.1s ease-in;
+  &:active {
+    scale: 0.8;
+  }
+`;
+
 function PropertyPage() {
   const [showSlider, setShowSlider] = useState(false);
-
+  const [currentSrc, setCurentSrc] = useState("/src/assets/images/r2.jpg");
   return (
     <Wrapper>
       {showSlider &&
@@ -159,7 +206,7 @@ function PropertyPage() {
         transition={{ duration: 1 }}
       >
         <ImageWrapper>
-          <img src="/src/assets/images/r2.jpg" alt="house" />
+          <img src={currentSrc} alt="house" />
         </ImageWrapper>
         <TagContent>Living Room</TagContent>
 
@@ -184,7 +231,46 @@ function PropertyPage() {
         </IconWrapper>
       </SliderWrapper>
 
-      <ContentWrapper>content</ContentWrapper>
+      <ContentWrapper>
+        <TitleWrapper>
+          <Title>Cosy apartment for rent</Title>
+          <RateBox />
+        </TitleWrapper>
+
+        <LocationWrapper>
+          <AddLocationIcon style={{ color: "#6d6d6d" }} />
+          <p>Mazandaran ramsar 23</p>
+        </LocationWrapper>
+
+        <DescriptionWrapper>
+          For residents in South Africa looking for an affordable place to call
+          home; allow us to introduce the new modular style homes. Welcome to
+          our Net-Zero Affordable Housing Extended Stay Rental Community. The
+          rentals will be located in Pietersburg, South Africa and we advise you
+          to reserve your suite today, starting at only 100 South African Rand
+          per week with utilities included. But hurry before the price increases
+          assigned parking.
+        </DescriptionWrapper>
+
+        <MediaWrapper>
+          <MediaImage
+            onClick={(e) => setCurentSrc(e.target.src)}
+            src="/src/assets/images/r3.jpg"
+          />
+          <MediaImage
+            onClick={(e) => setCurentSrc(e.target.src)}
+            src="/src/assets/images/r1.jpg"
+          />
+          <MediaImage
+            onClick={(e) => setCurentSrc(e.target.src)}
+            src="/src/assets/images/r2.jpg"
+          />
+          <MediaImage
+            onClick={(e) => setCurentSrc(e.target.src)}
+            src="/src/assets/images/r3.jpg"
+          />
+        </MediaWrapper>
+      </ContentWrapper>
 
       <SideBarWrapper>Side Bar</SideBarWrapper>
     </Wrapper>
