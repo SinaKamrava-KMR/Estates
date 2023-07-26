@@ -1,9 +1,11 @@
 import { Box, styled } from "@mui/material";
-import { Housevitrin } from "./Housevitrin";
+
 import { motion } from "framer-motion";
 import { useNavigate } from "react-router";
+import { Housevitrin } from "./HouseVitrin";
 
 const Wrapper = styled(Box)({
+  alignItems:"center",
   display: "flex",
   justifyContent: "space-between",
   height: "100%",

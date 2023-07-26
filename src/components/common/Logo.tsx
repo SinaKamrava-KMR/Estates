@@ -14,7 +14,7 @@ function Logo({ size = 26 }: LogoType) {
           width: 80,
         }}
         alt="Estates Logo"
-        src="./public/logo.png"
+        src="/public/logo.png"
       ></Box>
 
       <Typography variant="body1" sx={{ fontSize: size, fontWeight: "bold" }}>
