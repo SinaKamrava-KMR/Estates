@@ -65,7 +65,7 @@ function HomePage() {
               display: "block",
             }}
           >
-            No Worries 🔥
+            No Worries ✨
           </SpecilWord>
           <Title>
             Easy Way To Find a <SpecilWord>Perfect</SpecilWord> Property
