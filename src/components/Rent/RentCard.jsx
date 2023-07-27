@@ -26,7 +26,7 @@ const CardImageWrapper = styled("div")({
 
 const DitailsBox = styled("div")({
   position: "absolute",
-  zIndex: 10,
+  zIndex: 11,
   color: "#fff",
   padding: "5px 10px",
   borderRadius: 50,
