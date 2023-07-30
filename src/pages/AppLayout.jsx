@@ -17,6 +17,7 @@ const MainWrapper = styled(Box)({
   alignContent: "center",
   gridTemplateRows: "1fr",
   gridTemplateColumns: "1fr",
+  padding: 20,
 
 });
 

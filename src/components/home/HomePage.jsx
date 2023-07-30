@@ -5,7 +5,7 @@ import { useNavigate } from "react-router";
 import { Housevitrin } from "./HouseVitrin";
 
 const Wrapper = styled(Box)({
-  alignItems:"center",
+  alignItems: "center",
   display: "flex",
   justifyContent: "space-between",
   height: "100%",
@@ -48,7 +48,7 @@ const GetStartBtn = styled("button")({
 });
 
 function HomePage() {
-  const navigate = useNavigate()
+  const navigate = useNavigate();
   return (
     <Wrapper>
       <Content>
@@ -84,14 +84,14 @@ function HomePage() {
         </motion.div>
 
         <GetStartBtn
-          onClick={()=>navigate("/rent")}
+          onClick={() => navigate("/rent")}
           as={motion.button}
           initial={{
             opacity: 0,
           }}
           animate={{ opacity: 1 }}
           transition={{
-            duration: .8,
+            duration: 0.8,
             delay: 1.5,
           }}
         >

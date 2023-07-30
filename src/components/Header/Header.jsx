@@ -17,10 +17,11 @@ const HeaderWrapper = styled(Box)({
   zIndex: 10,
   backgroundColor: "#fff",
   width: "100%",
-  height: "65px",
+  height: "85px",
   display: "flex",
   alignItems: "center",
   justifyContent: "space-between",
+  padding: 20
 });
 const LinkWrapper = styled(Box)({
   display: "flex",

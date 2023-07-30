@@ -6,9 +6,10 @@ import NotFound from "./pages/NotFound";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
 
-import Map from "./components/map/Map";
+
 import RentHouses from "./components/Rent/RentHouses";
 import PropertyPage from "./components/property/PropertyPage";
+import MapLayout from "./components/map/MapLayout";
 
 const router = createBrowserRouter([
   {
@@ -21,7 +22,7 @@ const router = createBrowserRouter([
       },
       {
         path: "/map",
-        element: <Map />,
+        element: <MapLayout />,
       },
       {
         path: "/about",
