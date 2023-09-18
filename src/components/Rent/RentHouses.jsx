@@ -35,8 +35,8 @@ const initialState = {
   roomcount: "",
 };
 
-const dateOptions = ["2023", "2022", "2021"];
-const LocationsOptions = ["Iran", "Ameriac", "Germany", "Ramsar", "Tonekabon"];
+const dateOptions = ["2024", "2022", "2021"];
+const LocationsOptions = ["Iraq", "Iran", "Germany", "Ramsar", "Tonekabon"];
 const RoomsOptions = ["1", "2", "3", "4"];
 
 let fakeCards = [
@@ -51,7 +51,7 @@ let fakeCards = [
     image: "./src/assets/images/bopp.jpg",
   },
   {
-    id: 43342,
+    id: 43341,
     fileId: 23,
     title: "Sell with poll ",
     location: "Tehran",

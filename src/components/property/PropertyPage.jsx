@@ -17,6 +17,9 @@ const Wrapper = styled.div`
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: 500px 340px;
   padding-bottom: 20px;
+
+
+
   @media (max-width: 900px) {
     grid-template-columns: repeat(1, 1fr);
     grid-template-rows: 300px 500px 300px;
@@ -98,6 +101,7 @@ const ShowSliderWrapper = styled.div`
 const ShowSliderContents = styled.div`
   backdrop-filter: blur(8px);
   width: 100%;
+
   height: 100%;
 `;
 const SliderText = styled.p`
@@ -190,7 +194,7 @@ const MediaImage = styled.img`
   border-radius: 10px;
   transition: all 0.1s ease-in;
   &:active {
-    scale: 0.8;
+    scale: 0.9;
   }
 `;
 const HouseOptionsWrapper = styled.div`
@@ -242,8 +246,9 @@ const ShowBtn = styled.button`
   justify-content: center;
   background-color: #11101b;
   color: white;
-  font-size: 18px;
+  font-size: 17px;
   flex: 1;
+
   cursor: pointer;
   padding-block: 8px;
   border-radius: 6px;
